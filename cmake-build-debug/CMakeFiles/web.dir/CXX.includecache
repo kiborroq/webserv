@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kiborroq/Desktop/git/web/ConfigFile.cpp
+ConfigFile.h
+/home/kiborroq/Desktop/git/web/ConfigFile.h
+
+/home/kiborroq/Desktop/git/web/ConfigFile.h
+map
+-
+list
+-
+string
+-
+vector
+-
+iostream
+-
+fstream
+-
+sstream
+-
+limits
+-
+

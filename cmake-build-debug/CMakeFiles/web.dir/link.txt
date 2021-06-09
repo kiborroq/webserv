@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/web.dir/main.cpp.o CMakeFiles/web.dir/Config.cpp.o CMakeFiles/web.dir/Socket.cpp.o -o web 
