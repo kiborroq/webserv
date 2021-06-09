@@ -1,8 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/web.dir/Config.cpp.o"
-  "CMakeFiles/web.dir/Socket.cpp.o"
-  "CMakeFiles/web.dir/main.cpp.o"
-  "web"
+  "CMakeFiles/web.dir/Config.cpp.obj"
+  "CMakeFiles/web.dir/Socket.cpp.obj"
+  "CMakeFiles/web.dir/main.cpp.obj"
+  "libweb.dll.a"
+  "web.exe"
+  "web.exe.manifest"
   "web.pdb"
 )
 

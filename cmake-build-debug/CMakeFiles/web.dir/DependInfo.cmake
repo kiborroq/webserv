@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/kiborroq/Desktop/git/webserv/Config.cpp" "/home/kiborroq/Desktop/git/webserv/cmake-build-debug/CMakeFiles/web.dir/Config.cpp.o"
-  "/home/kiborroq/Desktop/git/webserv/Socket.cpp" "/home/kiborroq/Desktop/git/webserv/cmake-build-debug/CMakeFiles/web.dir/Socket.cpp.o"
-  "/home/kiborroq/Desktop/git/webserv/main.cpp" "/home/kiborroq/Desktop/git/webserv/cmake-build-debug/CMakeFiles/web.dir/main.cpp.o"
+  "C:/Users/Дмитрий Мамедов/Desktop/42/webserv/Config.cpp" "C:/Users/Дмитрий Мамедов/Desktop/42/webserv/cmake-build-debug/CMakeFiles/web.dir/Config.cpp.obj"
+  "C:/Users/Дмитрий Мамедов/Desktop/42/webserv/Socket.cpp" "C:/Users/Дмитрий Мамедов/Desktop/42/webserv/cmake-build-debug/CMakeFiles/web.dir/Socket.cpp.obj"
+  "C:/Users/Дмитрий Мамедов/Desktop/42/webserv/main.cpp" "C:/Users/Дмитрий Мамедов/Desktop/42/webserv/cmake-build-debug/CMakeFiles/web.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
