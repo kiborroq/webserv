@@ -1,6 +1,7 @@
 #ifndef UTILS_HPP
 # define UTILS_HPP
 
+# include <sstream>
 template <typename T>
 T ato_all(std::string const& s)
 {

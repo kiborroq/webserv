@@ -6,11 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/kiborroq/Desktop/git/web/ConfigFile.cpp
-ConfigFile.h
-/home/kiborroq/Desktop/git/web/ConfigFile.h
-
-/home/kiborroq/Desktop/git/web/ConfigFile.h
+/home/kiborroq/Desktop/git/webserv/Config.hpp
 map
 -
 list
@@ -26,5 +22,19 @@ fstream
 sstream
 -
 limits
+-
+utils.hpp
+/home/kiborroq/Desktop/git/webserv/utils.hpp
+
+/home/kiborroq/Desktop/git/webserv/main.cpp
+iostream
+-
+Config.hpp
+/home/kiborroq/Desktop/git/webserv/Config.hpp
+sys/socket.h
+-
+
+/home/kiborroq/Desktop/git/webserv/utils.hpp
+sstream
 -
 

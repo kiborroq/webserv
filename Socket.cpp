@@ -20,5 +20,5 @@ void Socket::initAddrInfo()
 
 void Socket::createSocket()
 {
-	fdsock = socket();
+
 }
