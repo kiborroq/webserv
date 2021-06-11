@@ -1,3 +1,1 @@
-"C:\Program Files\JetBrains\CLion 2021.1.1\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\web.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\web.dir/objects.a @CMakeFiles\web.dir\objects1.rsp
-C:\MinGW\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\web.dir/objects.a -Wl,--no-whole-archive -o web.exe -Wl,--out-implib,libweb.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\web.dir\linklibs.rsp
+/usr/bin/c++ -g CMakeFiles/web.dir/main.cpp.o CMakeFiles/web.dir/Config.cpp.o CMakeFiles/web.dir/Socket.cpp.o CMakeFiles/web.dir/parsing_utils.cpp.o -o web 

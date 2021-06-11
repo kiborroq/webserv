@@ -3,4 +3,4 @@ project(web)
 
 set(CMAKE_CXX_STANDARD 98)
 
-add_executable(web main.cpp Config.hpp Config.cpp Socket.cpp Socket.hpp utils.hpp)
+add_executable(web main.cpp Config.hpp Config.cpp Socket.cpp Socket.hpp parsing_utils.hpp parsing_utils.cpp)

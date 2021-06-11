@@ -1,9 +1,15 @@
  #include <iostream>
  #include "Config.hpp"
- #include <sys/socket.h>
 
- int main() {
-     Config cf("./test.conf");
+ int main(void)
+ {
+	 try {
+		 Config cf("/home/kiborroq/Desktop/git/webserv/test.conf");
+		 std::cout << "ok" << std::endl;
+	 } catch (char const* s)
+	 {
+	 	std::cout << s << std::endl;
+	 }
      return 0;
  }
 
