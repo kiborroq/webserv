@@ -1,25 +1,24 @@
 #ifndef SOCKET_HPP
 # define SOCKET_HPP
 
-//# include <sys/socket.h>
-//# include <netdb.h>
+# include <sys/socket.h>
+# include <sys/types.h>
+# include <netdb.h>
 # include <string>
 # include <cstring>
-
-#include <ws2tcpip.h> //for windows
-#include <wspiapi.h> //for windows
+# include <fcntl.h>
 
 # include "utils.hpp"
 # include "Config.hpp"
 
-# define BACKLOG 100;
+# define BACKLOG 100
 
 class Socket
 {
 	private:
 		server_context const& sc;
-		struct addrinfo *server_info;
 		int fdsock;
+		int optval;
 		bool is_active;
 
 	public:
@@ -27,11 +26,14 @@ class Socket
 		Socket(Socket const& s);
 		~Socket(void);
 
-		Socket & operator=(Socket const& s);
+		int getFdSock(void);
+		server_context const& getServerContext(void);
 
 	private:
-		void initServerInfo(void);
-		void createSocket(void);
+		struct addrinfo *getServerInfo(void);
+		void createSocket(struct addrinfo *server_info);
+		void adjustSocket(void);
+		void bindListenSocket(struct addrinfo *server_info);
 };
 
 #endif //SOCKET_HPP

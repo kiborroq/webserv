@@ -3,12 +3,9 @@
  #include <sys/socket.h>
 
  int main() {
-     Config cf("/home/kiborroq/Desktop/git/Webserv/test.conf");
-
-
+     Config cf("./test.conf");
      return 0;
  }
-
 
 //#include <stdio.h>
 //#include <string.h>
