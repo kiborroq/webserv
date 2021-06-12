@@ -1,7 +1,13 @@
 #include "Config.hpp"
 
 Config::Config(char const* config_path)
-	: servers()
+	: config_path(config_path), servers()
+{ }
+
+Config::~Config(void)
+{ }
+
+void Config::parseConfig(void)
 {
 	std::string content = getFileContent(config_path);
 	str_it curr = content.begin();
@@ -17,9 +23,6 @@ Config::Config(char const* config_path)
 			throw "Config 1!";
 	}
 }
-
-Config::~Config(void)
-{ }
 
 void Config::setHostPort(str_it & curr_pos, str_it const& end, server_context & s)
 {
@@ -64,7 +67,8 @@ void Config::setArray(str_it & curr_pos, str_it const& end, std::list<std::strin
 	{
 		if (!valid(elem))
 			throw "Config file error!";
-		l.push_back(elem);
+		if (std::find(l.begin(), l.end(), elem) != l.begin())
+			l.push_back(elem);
 		elem = getWord(curr_pos, end, ';');
 	}
 	if (curr_pos == end)
@@ -149,15 +153,17 @@ void Config::setLocation(str_it & curr_pos, str_it const& end, locations_map & l
 	initLocation(l, s);
 	l.location_name = word;
 	location_counter counter;
+	memset(&counter, 0, sizeof(counter));
+
 	while ((word = getWord(curr_pos, end, '}')) != "}" && curr_pos != end)
 	{
 		if (word == "root" && counter.root++ < 1)
 			setPath(curr_pos, end, l.root);
-		else if (word == "index" && counter.index++ < 1)
+		else if (word == "index")
 			setArray(curr_pos, end, l.index, validDirective);
 		else if (word == "client_max_body_size" && counter.client_max_body_size++ < 1)
 			setMaxBodySize(curr_pos, end, l.client_max_body_size);
-		else if (word == "http_method" && counter.http_method++ < 1)
+		else if (word == "http_method")
 			setArray(curr_pos, end, l.http_method, validMethod);
 		else if (word == "autoindex" && counter.autoindex++ < 1)
 			setEnable(curr_pos, end, l.autoindex);
@@ -213,6 +219,7 @@ void Config::setServer(str_it & curr_pos, str_it const& end, servers_map & serve
 	initServer(s);
 	locations_save_list lsl;
 	server_counter counter;
+	memset(&counter, 0, sizeof(counter));
 
 	if (getWord(curr_pos, end) != "{")
 		throw "Config file error!";
@@ -222,7 +229,7 @@ void Config::setServer(str_it & curr_pos, str_it const& end, servers_map & serve
 			setHostPort(curr_pos, end, s);
 		else if (word == "root" && counter.root++ < 1)
 			setPath(curr_pos, end, s.root);
-		else if (word == "index" && counter.index++ < 1)
+		else if (word == "index")
 			setArray(curr_pos, end, s.index, validDirective);
 		else if (word == "client_max_body_size" && counter.client_max_body_size++ < 1)
 			setMaxBodySize(curr_pos, end, s.client_max_body_size);
@@ -232,14 +239,14 @@ void Config::setServer(str_it & curr_pos, str_it const& end, servers_map & serve
 			setArray(curr_pos, end, s.server_name, validDirective);
 		else if (word == "error_page")
 			setErrorPage(curr_pos, end, s.error_page);
-		else if (word == "location")
+		else if (word == "location" && ++counter.location)
 			saveAndPassLocation(curr_pos, end, lsl);
 		else if (word == "return" && counter.redirect++ < 1)
 			setRedirect(curr_pos, end, s.redirect);
 		else
 			throw "Config file error!";
 	}
-	if (word != "}")
+	if (word != "}" || (counter.location == 0 && counter.redirect == 0))
 		throw "Config file error!";
 	for (locations_save_list::iterator curr = lsl.begin(); curr != lsl.end(); ++curr)
 		setLocation(*curr, end, s.location, s);

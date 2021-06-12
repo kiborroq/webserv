@@ -17,10 +17,12 @@
 # include <list>
 # include <string>
 # include <vector>
+# include <algorithm>
 # include <iostream>
 # include <fstream>
 # include <sstream>
 # include <limits>
+# include <cstring>
 # include "parsing_utils.hpp"
 
 typedef struct						location_context
@@ -55,29 +57,25 @@ typedef struct						server_context
 
 typedef struct						location_counter
 {
-	size_t							root = 0;
-	size_t							index = 0;
-	size_t							client_max_body_size = 0;
-	size_t							http_method = 0;
-	size_t							autoindex = 0;
-	size_t							default_file_path = 0;
-	size_t							cgi_extension = 0;
-	size_t							cgi_path = 0;
-	size_t							uploading_enable = 0;
-	size_t							uploading_path = 0;
-	size_t							redirect = 0;
+	size_t							root;
+	size_t							client_max_body_size;
+	size_t							autoindex;
+	size_t							default_file_path;
+	size_t							cgi_extension;
+	size_t							cgi_path;
+	size_t							uploading_enable;
+	size_t							uploading_path;
+	size_t							redirect;
 }									location_counter;
 
 typedef struct						server_counter
 {
-	size_t							listen = 0;
-	size_t							root = 0;
-	size_t							index = 0;
-	size_t							autoindex = 0;
-	size_t							client_max_body_size = 0;
-	size_t							server_name = 0;
-	size_t							error_page = 0;
-	size_t							redirect = 0;
+	size_t							listen;
+	size_t							root;
+	size_t							autoindex;
+	size_t							client_max_body_size;
+	size_t							location;
+	size_t							redirect;
 }									server_counter;
 
 class Config
@@ -89,12 +87,15 @@ class Config
 		typedef std::list<str_it> locations_save_list;
 	
 	public:
+		const char* config_path;
 		servers_map servers;
 	
 	public:
 		Config(char const* config_path);
 		~Config(void);
-	
+
+		void parseConfig(void);
+
 	private:
 		void setServer(str_it & curr_pos, str_it const& end, servers_map & servers);
 		void setHostPort(str_it & curr_pos, str_it const& end, server_context & s);

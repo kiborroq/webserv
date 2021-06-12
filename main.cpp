@@ -1,17 +1,24 @@
- #include <iostream>
- #include "Config.hpp"
+#include <iostream>
+#include "Config.hpp"
 
- int main(void)
- {
-	 try {
-		 Config cf("/home/kiborroq/Desktop/git/webserv/test.conf");
-		 std::cout << "ok" << std::endl;
-	 } catch (char const* s)
-	 {
-	 	std::cout << s << std::endl;
-	 }
-     return 0;
- }
+int main(int argc, char**argv, char**envp) {
+
+	if (argc != 2)
+	{
+		std::cout << "program 2 arguments need" << std::endl;
+		return 0;
+	}
+
+	Config config("/home/kiborroq/Desktop/git/webserv/test.conf");
+
+	try {
+		config.parseConfig();
+		std::cout << "ok" << std::endl;
+	} catch (char const *s) {
+		std::cout << s << std::endl;
+	}
+	return 0;
+}
 
 //#include <stdio.h>
 //#include <string.h>
