@@ -25,6 +25,8 @@
 # include <cstring>
 # include "parsing_utils.hpp"
 
+# define LOCALHOST "127.0.0.1"
+
 typedef struct						location_context
 {
 	std::string						location_name;
@@ -80,21 +82,22 @@ typedef struct						server_counter
 
 class Config
 {
-	private:
-		typedef std::map< std::string, std::list<server_context> > servers_map;
+	public:
+		typedef std::map< std::string, server_context > servers_map;
 		typedef std::map<std::string, location_context> locations_map;
 		typedef std::map<int, std::string> errorpages_map;
 		typedef std::list<str_it> locations_save_list;
 	
-	public:
+	private:
 		const char* config_path;
 		servers_map servers;
-	
+
 	public:
 		Config(char const* config_path);
 		~Config(void);
 
 		void parseConfig(void);
+		servers_map const& getServersMap(void);
 
 	private:
 		void setServer(str_it & curr_pos, str_it const& end, servers_map & servers);
@@ -107,7 +110,6 @@ class Config
 		void setCgiExtension(str_it & curr_pos, str_it const& end, std::string & extension);
 		void setLocation(str_it & curr_pos, str_it const& end, locations_map & locations, server_context const& s);
 		void setRedirect(str_it & curr_pos, str_it const& end, std::pair<int, std::string> & redirect);
-	
 		void initServer(server_context & s);
 		void initLocation(location_context & l, server_context const& src);
 		void saveAndPassLocation(str_it & curr_pos, str_it const& end, locations_save_list & lsl);

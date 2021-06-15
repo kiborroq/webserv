@@ -52,4 +52,6 @@ bool iscontained(std::string const& s, char c);
 std::string charToString(char c);
 bool isSizeLetter(char c);
 
+std::string ft_inet_ntoa(struct in_addr const& addr);
+
 #endif // PARSING_UTILS_HPP

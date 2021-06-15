@@ -142,6 +142,33 @@ web/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/build
 .PHONY : web/fast
 
+ClientSocket.o: ClientSocket.cpp.o
+
+.PHONY : ClientSocket.o
+
+# target to build an object file
+ClientSocket.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/ClientSocket.cpp.o
+.PHONY : ClientSocket.cpp.o
+
+ClientSocket.i: ClientSocket.cpp.i
+
+.PHONY : ClientSocket.i
+
+# target to preprocess a source file
+ClientSocket.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/ClientSocket.cpp.i
+.PHONY : ClientSocket.cpp.i
+
+ClientSocket.s: ClientSocket.cpp.s
+
+.PHONY : ClientSocket.s
+
+# target to generate assembly for a file
+ClientSocket.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/ClientSocket.cpp.s
+.PHONY : ClientSocket.cpp.s
+
 Config.o: Config.cpp.o
 
 .PHONY : Config.o
@@ -169,32 +196,113 @@ Config.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/Config.cpp.s
 .PHONY : Config.cpp.s
 
-Socket.o: Socket.cpp.o
+Logger.o: Logger.cpp.o
 
-.PHONY : Socket.o
+.PHONY : Logger.o
 
 # target to build an object file
-Socket.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/Socket.cpp.o
-.PHONY : Socket.cpp.o
+Logger.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/Logger.cpp.o
+.PHONY : Logger.cpp.o
 
-Socket.i: Socket.cpp.i
+Logger.i: Logger.cpp.i
 
-.PHONY : Socket.i
+.PHONY : Logger.i
 
 # target to preprocess a source file
-Socket.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/Socket.cpp.i
-.PHONY : Socket.cpp.i
+Logger.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/Logger.cpp.i
+.PHONY : Logger.cpp.i
 
-Socket.s: Socket.cpp.s
+Logger.s: Logger.cpp.s
 
-.PHONY : Socket.s
+.PHONY : Logger.s
 
 # target to generate assembly for a file
-Socket.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/Socket.cpp.s
-.PHONY : Socket.cpp.s
+Logger.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/Logger.cpp.s
+.PHONY : Logger.cpp.s
+
+PollFDs.o: PollFDs.cpp.o
+
+.PHONY : PollFDs.o
+
+# target to build an object file
+PollFDs.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/PollFDs.cpp.o
+.PHONY : PollFDs.cpp.o
+
+PollFDs.i: PollFDs.cpp.i
+
+.PHONY : PollFDs.i
+
+# target to preprocess a source file
+PollFDs.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/PollFDs.cpp.i
+.PHONY : PollFDs.cpp.i
+
+PollFDs.s: PollFDs.cpp.s
+
+.PHONY : PollFDs.s
+
+# target to generate assembly for a file
+PollFDs.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/PollFDs.cpp.s
+.PHONY : PollFDs.cpp.s
+
+ServerSocket.o: ServerSocket.cpp.o
+
+.PHONY : ServerSocket.o
+
+# target to build an object file
+ServerSocket.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/ServerSocket.cpp.o
+.PHONY : ServerSocket.cpp.o
+
+ServerSocket.i: ServerSocket.cpp.i
+
+.PHONY : ServerSocket.i
+
+# target to preprocess a source file
+ServerSocket.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/ServerSocket.cpp.i
+.PHONY : ServerSocket.cpp.i
+
+ServerSocket.s: ServerSocket.cpp.s
+
+.PHONY : ServerSocket.s
+
+# target to generate assembly for a file
+ServerSocket.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/ServerSocket.cpp.s
+.PHONY : ServerSocket.cpp.s
+
+WebServer.o: WebServer.cpp.o
+
+.PHONY : WebServer.o
+
+# target to build an object file
+WebServer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/WebServer.cpp.o
+.PHONY : WebServer.cpp.o
+
+WebServer.i: WebServer.cpp.i
+
+.PHONY : WebServer.i
+
+# target to preprocess a source file
+WebServer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/WebServer.cpp.i
+.PHONY : WebServer.cpp.i
+
+WebServer.s: WebServer.cpp.s
+
+.PHONY : WebServer.s
+
+# target to generate assembly for a file
+WebServer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/WebServer.cpp.s
+.PHONY : WebServer.cpp.s
 
 main.o: main.cpp.o
 
@@ -259,12 +367,24 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... web"
+	@echo "... ClientSocket.o"
+	@echo "... ClientSocket.i"
+	@echo "... ClientSocket.s"
 	@echo "... Config.o"
 	@echo "... Config.i"
 	@echo "... Config.s"
-	@echo "... Socket.o"
-	@echo "... Socket.i"
-	@echo "... Socket.s"
+	@echo "... Logger.o"
+	@echo "... Logger.i"
+	@echo "... Logger.s"
+	@echo "... PollFDs.o"
+	@echo "... PollFDs.i"
+	@echo "... PollFDs.s"
+	@echo "... ServerSocket.o"
+	@echo "... ServerSocket.i"
+	@echo "... ServerSocket.s"
+	@echo "... WebServer.o"
+	@echo "... WebServer.i"
+	@echo "... WebServer.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

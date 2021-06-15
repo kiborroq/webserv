@@ -6,9 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/kiborroq/Desktop/git/webserv/Config.cpp
-Config.hpp
-/home/kiborroq/Desktop/git/webserv/Config.hpp
+/home/kiborroq/Desktop/git/webserv/ClientSocket.hpp
+sys/socket.h
+-
+ServerSocket.hpp
+/home/kiborroq/Desktop/git/webserv/ServerSocket.hpp
 
 /home/kiborroq/Desktop/git/webserv/Config.hpp
 map
@@ -19,6 +21,8 @@ string
 -
 vector
 -
+algorithm
+-
 iostream
 -
 fstream
@@ -27,18 +31,56 @@ sstream
 -
 limits
 -
+cstring
+-
 parsing_utils.hpp
 /home/kiborroq/Desktop/git/webserv/parsing_utils.hpp
+
+/home/kiborroq/Desktop/git/webserv/PollFDs.hpp
+vector
+-
+algorithm
+-
+sys/poll.h
+-
+
+/home/kiborroq/Desktop/git/webserv/ServerSocket.hpp
+sys/socket.h
+-
+arpa/inet.h
+-
+string
+-
+cstring
+-
+fcntl.h
+-
+unistd.h
+-
+map
+-
+Config.hpp
+/home/kiborroq/Desktop/git/webserv/Config.hpp
+ClientSocket.hpp
+/home/kiborroq/Desktop/git/webserv/ClientSocket.hpp
+
+/home/kiborroq/Desktop/git/webserv/WebServer.hpp
+vector
+-
+sys/poll.h
+-
+ServerSocket.hpp
+/home/kiborroq/Desktop/git/webserv/ServerSocket.hpp
+PollFDs.hpp
+/home/kiborroq/Desktop/git/webserv/PollFDs.hpp
 
 /home/kiborroq/Desktop/git/webserv/main.cpp
 iostream
 -
+WebServer.hpp
+/home/kiborroq/Desktop/git/webserv/WebServer.hpp
 Config.hpp
 /home/kiborroq/Desktop/git/webserv/Config.hpp
-
-/home/kiborroq/Desktop/git/webserv/parsing_utils.cpp
-parsing_utils.hpp
-/home/kiborroq/Desktop/git/webserv/parsing_utils.hpp
 
 /home/kiborroq/Desktop/git/webserv/parsing_utils.hpp
 sstream

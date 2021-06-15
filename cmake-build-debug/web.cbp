@@ -82,16 +82,40 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/kiborroq/Desktop/git/webserv/ClientSocket.cpp">
+			<Option target="web"/>
+		</Unit>
+		<Unit filename="/home/kiborroq/Desktop/git/webserv/ClientSocket.hpp">
+			<Option target="web"/>
+		</Unit>
 		<Unit filename="/home/kiborroq/Desktop/git/webserv/Config.cpp">
 			<Option target="web"/>
 		</Unit>
 		<Unit filename="/home/kiborroq/Desktop/git/webserv/Config.hpp">
 			<Option target="web"/>
 		</Unit>
-		<Unit filename="/home/kiborroq/Desktop/git/webserv/Socket.cpp">
+		<Unit filename="/home/kiborroq/Desktop/git/webserv/Logger.cpp">
 			<Option target="web"/>
 		</Unit>
-		<Unit filename="/home/kiborroq/Desktop/git/webserv/Socket.hpp">
+		<Unit filename="/home/kiborroq/Desktop/git/webserv/Logger.hpp">
+			<Option target="web"/>
+		</Unit>
+		<Unit filename="/home/kiborroq/Desktop/git/webserv/PollFDs.cpp">
+			<Option target="web"/>
+		</Unit>
+		<Unit filename="/home/kiborroq/Desktop/git/webserv/PollFDs.hpp">
+			<Option target="web"/>
+		</Unit>
+		<Unit filename="/home/kiborroq/Desktop/git/webserv/ServerSocket.cpp">
+			<Option target="web"/>
+		</Unit>
+		<Unit filename="/home/kiborroq/Desktop/git/webserv/ServerSocket.hpp">
+			<Option target="web"/>
+		</Unit>
+		<Unit filename="/home/kiborroq/Desktop/git/webserv/WebServer.cpp">
+			<Option target="web"/>
+		</Unit>
+		<Unit filename="/home/kiborroq/Desktop/git/webserv/WebServer.hpp">
 			<Option target="web"/>
 		</Unit>
 		<Unit filename="/home/kiborroq/Desktop/git/webserv/main.cpp">

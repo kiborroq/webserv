@@ -7,6 +7,9 @@ Config::Config(char const* config_path)
 Config::~Config(void)
 { }
 
+Config::servers_map const& Config::getServersMap(void)
+{ return servers; }
+
 void Config::parseConfig(void)
 {
 	std::string content = getFileContent(config_path);
@@ -185,9 +188,8 @@ void Config::setLocation(str_it & curr_pos, str_it const& end, locations_map & l
 	if (word != "}")
 		throw "Config file error!";
 
-	locations_map::iterator it = locations.find(l.location_name);
-	if (it == locations.end())
-		locations.insert( std::make_pair(l.location_name, l) );
+	if (locations.find(l.location_name) == locations.end())
+		locations[l.location_name] = l;
 	else
 		throw "Config file error!";
 }
@@ -248,7 +250,11 @@ void Config::setServer(str_it & curr_pos, str_it const& end, servers_map & serve
 	}
 	if (word != "}" || (counter.location == 0 && counter.redirect == 0))
 		throw "Config file error!";
-	for (locations_save_list::iterator curr = lsl.begin(); curr != lsl.end(); ++curr)
-		setLocation(*curr, end, s.location, s);
-	servers[s.host + ":" + all_toa(s.port)].push_back(s);
+
+	std::string server_id = s.host + ":" + all_toa(s.port);
+	if (servers.find(server_id) == servers.end()) {
+		for (locations_save_list::iterator curr = lsl.begin(); curr != lsl.end(); ++curr)
+			setLocation(*curr, end, s.location, s);
+		servers[server_id] = s;
+	}
 }

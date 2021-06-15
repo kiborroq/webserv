@@ -38,10 +38,10 @@ bool validDirective(std::string const& value)
 
 bool validHost(std::string & host)
 {
-	if (host == "localhost")
-		return true;
 	if (host == "")
 		return false;
+	if (host == "localhost")
+		return true;
 
 	int num_parts = 0;
 	std::string part;
@@ -51,14 +51,15 @@ bool validHost(std::string & host)
 	while (curr != end && num_parts <= 4)
 	{
 		part = getWord(curr, end, '.');
-		if (curr == end || *curr != '.' ||
+		if ((curr != end && *curr != '.') ||
 			part.size() > 3 || part.size() < 1 ||
 			(part.size() == 3 && part[0] == '0') ||
 			(part.size() == 2 && part[0] == '0') ||
 			!isonlydigits(part, part.size()) ||
 			ato_all<int>(part) < 0 || ato_all<int>(part) > 255)
 			return false;
-		curr++;
+		if (curr != end)
+			curr++;
 		num_parts++;
 	}
 	if (num_parts != 4)
@@ -185,4 +186,18 @@ bool isSizeLetter(char c)
 		c != 'K' && c != 'M' && c != 'G' )
 		return false;
 	return true;
+}
+
+std::string ft_inet_ntoa(struct in_addr const& addr)
+{
+	std::stringstream ip;
+
+	unsigned char const *bytes = reinterpret_cast<unsigned char const*>(&addr);
+	for (int cur_bytes = 0; cur_bytes < 4; cur_bytes++)
+	{
+		ip << static_cast<int>(bytes[cur_bytes]);
+		if (cur_bytes != 3)
+			ip << '.';
+	}
+	return (ip.str());
 }
