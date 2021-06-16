@@ -8,7 +8,6 @@ class ServerSocket;
 
 class ClientSocket
 {
-
 	private:
 		int sock_fd;
 		ServerSocket const* parent;
@@ -31,7 +30,7 @@ class ClientSocket
 
 		bool readyForSending(void) const;
 
-		std::string const& getSocketInfo(void) const;
+		std::string getSocketInfo(void) const;
 		ServerSocket const& getParentSocket(void) const;
 		int getSocketFD(void) const;
 };

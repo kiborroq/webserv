@@ -53,19 +53,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/kiborroq/clion-2021.1.2/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/kiborrok/Downloads/clion-2021.1.2/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/kiborroq/clion-2021.1.2/bin/cmake/linux/bin/cmake -E rm -f
+RM = /home/kiborrok/Downloads/clion-2021.1.2/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kiborroq/Desktop/git/webserv
+CMAKE_SOURCE_DIR = /home/kiborrok/Desktop/git/webserv
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kiborroq/Desktop/git/webserv/cmake-build-debug
+CMAKE_BINARY_DIR = /home/kiborrok/Desktop/git/webserv/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/web.dir/depend.make
@@ -78,107 +78,120 @@ include CMakeFiles/web.dir/flags.make
 
 CMakeFiles/web.dir/main.cpp.o: CMakeFiles/web.dir/flags.make
 CMakeFiles/web.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kiborroq/Desktop/git/webserv/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/web.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/web.dir/main.cpp.o -c /home/kiborroq/Desktop/git/webserv/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kiborrok/Desktop/git/webserv/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/web.dir/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/web.dir/main.cpp.o -c /home/kiborrok/Desktop/git/webserv/main.cpp
 
 CMakeFiles/web.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/web.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kiborroq/Desktop/git/webserv/main.cpp > CMakeFiles/web.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kiborrok/Desktop/git/webserv/main.cpp > CMakeFiles/web.dir/main.cpp.i
 
 CMakeFiles/web.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/web.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kiborroq/Desktop/git/webserv/main.cpp -o CMakeFiles/web.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kiborrok/Desktop/git/webserv/main.cpp -o CMakeFiles/web.dir/main.cpp.s
 
 CMakeFiles/web.dir/Config.cpp.o: CMakeFiles/web.dir/flags.make
 CMakeFiles/web.dir/Config.cpp.o: ../Config.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kiborroq/Desktop/git/webserv/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/web.dir/Config.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/web.dir/Config.cpp.o -c /home/kiborroq/Desktop/git/webserv/Config.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kiborrok/Desktop/git/webserv/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/web.dir/Config.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/web.dir/Config.cpp.o -c /home/kiborrok/Desktop/git/webserv/Config.cpp
 
 CMakeFiles/web.dir/Config.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/web.dir/Config.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kiborroq/Desktop/git/webserv/Config.cpp > CMakeFiles/web.dir/Config.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kiborrok/Desktop/git/webserv/Config.cpp > CMakeFiles/web.dir/Config.cpp.i
 
 CMakeFiles/web.dir/Config.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/web.dir/Config.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kiborroq/Desktop/git/webserv/Config.cpp -o CMakeFiles/web.dir/Config.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kiborrok/Desktop/git/webserv/Config.cpp -o CMakeFiles/web.dir/Config.cpp.s
 
 CMakeFiles/web.dir/ServerSocket.cpp.o: CMakeFiles/web.dir/flags.make
 CMakeFiles/web.dir/ServerSocket.cpp.o: ../ServerSocket.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kiborroq/Desktop/git/webserv/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/web.dir/ServerSocket.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/web.dir/ServerSocket.cpp.o -c /home/kiborroq/Desktop/git/webserv/ServerSocket.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kiborrok/Desktop/git/webserv/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/web.dir/ServerSocket.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/web.dir/ServerSocket.cpp.o -c /home/kiborrok/Desktop/git/webserv/ServerSocket.cpp
 
 CMakeFiles/web.dir/ServerSocket.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/web.dir/ServerSocket.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kiborroq/Desktop/git/webserv/ServerSocket.cpp > CMakeFiles/web.dir/ServerSocket.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kiborrok/Desktop/git/webserv/ServerSocket.cpp > CMakeFiles/web.dir/ServerSocket.cpp.i
 
 CMakeFiles/web.dir/ServerSocket.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/web.dir/ServerSocket.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kiborroq/Desktop/git/webserv/ServerSocket.cpp -o CMakeFiles/web.dir/ServerSocket.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kiborrok/Desktop/git/webserv/ServerSocket.cpp -o CMakeFiles/web.dir/ServerSocket.cpp.s
 
 CMakeFiles/web.dir/parsing_utils.cpp.o: CMakeFiles/web.dir/flags.make
 CMakeFiles/web.dir/parsing_utils.cpp.o: ../parsing_utils.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kiborroq/Desktop/git/webserv/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/web.dir/parsing_utils.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/web.dir/parsing_utils.cpp.o -c /home/kiborroq/Desktop/git/webserv/parsing_utils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kiborrok/Desktop/git/webserv/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/web.dir/parsing_utils.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/web.dir/parsing_utils.cpp.o -c /home/kiborrok/Desktop/git/webserv/parsing_utils.cpp
 
 CMakeFiles/web.dir/parsing_utils.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/web.dir/parsing_utils.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kiborroq/Desktop/git/webserv/parsing_utils.cpp > CMakeFiles/web.dir/parsing_utils.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kiborrok/Desktop/git/webserv/parsing_utils.cpp > CMakeFiles/web.dir/parsing_utils.cpp.i
 
 CMakeFiles/web.dir/parsing_utils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/web.dir/parsing_utils.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kiborroq/Desktop/git/webserv/parsing_utils.cpp -o CMakeFiles/web.dir/parsing_utils.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kiborrok/Desktop/git/webserv/parsing_utils.cpp -o CMakeFiles/web.dir/parsing_utils.cpp.s
 
 CMakeFiles/web.dir/PollFDs.cpp.o: CMakeFiles/web.dir/flags.make
 CMakeFiles/web.dir/PollFDs.cpp.o: ../PollFDs.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kiborroq/Desktop/git/webserv/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/web.dir/PollFDs.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/web.dir/PollFDs.cpp.o -c /home/kiborroq/Desktop/git/webserv/PollFDs.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kiborrok/Desktop/git/webserv/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/web.dir/PollFDs.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/web.dir/PollFDs.cpp.o -c /home/kiborrok/Desktop/git/webserv/PollFDs.cpp
 
 CMakeFiles/web.dir/PollFDs.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/web.dir/PollFDs.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kiborroq/Desktop/git/webserv/PollFDs.cpp > CMakeFiles/web.dir/PollFDs.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kiborrok/Desktop/git/webserv/PollFDs.cpp > CMakeFiles/web.dir/PollFDs.cpp.i
 
 CMakeFiles/web.dir/PollFDs.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/web.dir/PollFDs.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kiborroq/Desktop/git/webserv/PollFDs.cpp -o CMakeFiles/web.dir/PollFDs.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kiborrok/Desktop/git/webserv/PollFDs.cpp -o CMakeFiles/web.dir/PollFDs.cpp.s
 
 CMakeFiles/web.dir/WebServer.cpp.o: CMakeFiles/web.dir/flags.make
 CMakeFiles/web.dir/WebServer.cpp.o: ../WebServer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kiborroq/Desktop/git/webserv/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/web.dir/WebServer.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/web.dir/WebServer.cpp.o -c /home/kiborroq/Desktop/git/webserv/WebServer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kiborrok/Desktop/git/webserv/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/web.dir/WebServer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/web.dir/WebServer.cpp.o -c /home/kiborrok/Desktop/git/webserv/WebServer.cpp
 
 CMakeFiles/web.dir/WebServer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/web.dir/WebServer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kiborroq/Desktop/git/webserv/WebServer.cpp > CMakeFiles/web.dir/WebServer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kiborrok/Desktop/git/webserv/WebServer.cpp > CMakeFiles/web.dir/WebServer.cpp.i
 
 CMakeFiles/web.dir/WebServer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/web.dir/WebServer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kiborroq/Desktop/git/webserv/WebServer.cpp -o CMakeFiles/web.dir/WebServer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kiborrok/Desktop/git/webserv/WebServer.cpp -o CMakeFiles/web.dir/WebServer.cpp.s
 
 CMakeFiles/web.dir/ClientSocket.cpp.o: CMakeFiles/web.dir/flags.make
 CMakeFiles/web.dir/ClientSocket.cpp.o: ../ClientSocket.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kiborroq/Desktop/git/webserv/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/web.dir/ClientSocket.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/web.dir/ClientSocket.cpp.o -c /home/kiborroq/Desktop/git/webserv/ClientSocket.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kiborrok/Desktop/git/webserv/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/web.dir/ClientSocket.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/web.dir/ClientSocket.cpp.o -c /home/kiborrok/Desktop/git/webserv/ClientSocket.cpp
 
 CMakeFiles/web.dir/ClientSocket.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/web.dir/ClientSocket.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kiborroq/Desktop/git/webserv/ClientSocket.cpp > CMakeFiles/web.dir/ClientSocket.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kiborrok/Desktop/git/webserv/ClientSocket.cpp > CMakeFiles/web.dir/ClientSocket.cpp.i
 
 CMakeFiles/web.dir/ClientSocket.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/web.dir/ClientSocket.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kiborroq/Desktop/git/webserv/ClientSocket.cpp -o CMakeFiles/web.dir/ClientSocket.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kiborrok/Desktop/git/webserv/ClientSocket.cpp -o CMakeFiles/web.dir/ClientSocket.cpp.s
 
 CMakeFiles/web.dir/Logger.cpp.o: CMakeFiles/web.dir/flags.make
 CMakeFiles/web.dir/Logger.cpp.o: ../Logger.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kiborroq/Desktop/git/webserv/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/web.dir/Logger.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/web.dir/Logger.cpp.o -c /home/kiborroq/Desktop/git/webserv/Logger.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kiborrok/Desktop/git/webserv/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/web.dir/Logger.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/web.dir/Logger.cpp.o -c /home/kiborrok/Desktop/git/webserv/Logger.cpp
 
 CMakeFiles/web.dir/Logger.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/web.dir/Logger.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kiborroq/Desktop/git/webserv/Logger.cpp > CMakeFiles/web.dir/Logger.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kiborrok/Desktop/git/webserv/Logger.cpp > CMakeFiles/web.dir/Logger.cpp.i
 
 CMakeFiles/web.dir/Logger.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/web.dir/Logger.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kiborroq/Desktop/git/webserv/Logger.cpp -o CMakeFiles/web.dir/Logger.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kiborrok/Desktop/git/webserv/Logger.cpp -o CMakeFiles/web.dir/Logger.cpp.s
+
+CMakeFiles/web.dir/Exceptions.cpp.o: CMakeFiles/web.dir/flags.make
+CMakeFiles/web.dir/Exceptions.cpp.o: ../Exceptions.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kiborrok/Desktop/git/webserv/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/web.dir/Exceptions.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/web.dir/Exceptions.cpp.o -c /home/kiborrok/Desktop/git/webserv/Exceptions.cpp
+
+CMakeFiles/web.dir/Exceptions.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/web.dir/Exceptions.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kiborrok/Desktop/git/webserv/Exceptions.cpp > CMakeFiles/web.dir/Exceptions.cpp.i
+
+CMakeFiles/web.dir/Exceptions.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/web.dir/Exceptions.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kiborrok/Desktop/git/webserv/Exceptions.cpp -o CMakeFiles/web.dir/Exceptions.cpp.s
 
 # Object files for target web
 web_OBJECTS = \
@@ -189,7 +202,8 @@ web_OBJECTS = \
 "CMakeFiles/web.dir/PollFDs.cpp.o" \
 "CMakeFiles/web.dir/WebServer.cpp.o" \
 "CMakeFiles/web.dir/ClientSocket.cpp.o" \
-"CMakeFiles/web.dir/Logger.cpp.o"
+"CMakeFiles/web.dir/Logger.cpp.o" \
+"CMakeFiles/web.dir/Exceptions.cpp.o"
 
 # External object files for target web
 web_EXTERNAL_OBJECTS =
@@ -202,9 +216,10 @@ web: CMakeFiles/web.dir/PollFDs.cpp.o
 web: CMakeFiles/web.dir/WebServer.cpp.o
 web: CMakeFiles/web.dir/ClientSocket.cpp.o
 web: CMakeFiles/web.dir/Logger.cpp.o
+web: CMakeFiles/web.dir/Exceptions.cpp.o
 web: CMakeFiles/web.dir/build.make
 web: CMakeFiles/web.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kiborroq/Desktop/git/webserv/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable web"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kiborrok/Desktop/git/webserv/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable web"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/web.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -217,6 +232,6 @@ CMakeFiles/web.dir/clean:
 .PHONY : CMakeFiles/web.dir/clean
 
 CMakeFiles/web.dir/depend:
-	cd /home/kiborroq/Desktop/git/webserv/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kiborroq/Desktop/git/webserv /home/kiborroq/Desktop/git/webserv /home/kiborroq/Desktop/git/webserv/cmake-build-debug /home/kiborroq/Desktop/git/webserv/cmake-build-debug /home/kiborroq/Desktop/git/webserv/cmake-build-debug/CMakeFiles/web.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kiborrok/Desktop/git/webserv/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kiborrok/Desktop/git/webserv /home/kiborrok/Desktop/git/webserv /home/kiborrok/Desktop/git/webserv/cmake-build-debug /home/kiborrok/Desktop/git/webserv/cmake-build-debug /home/kiborrok/Desktop/git/webserv/cmake-build-debug/CMakeFiles/web.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/web.dir/depend
 

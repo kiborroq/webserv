@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/web.dir/ClientSocket.cpp.o"
   "CMakeFiles/web.dir/Config.cpp.o"
+  "CMakeFiles/web.dir/Exceptions.cpp.o"
   "CMakeFiles/web.dir/Logger.cpp.o"
   "CMakeFiles/web.dir/PollFDs.cpp.o"
   "CMakeFiles/web.dir/ServerSocket.cpp.o"

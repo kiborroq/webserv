@@ -3,6 +3,7 @@
 
 # include <vector>
 # include <sys/poll.h>
+# include "Exceptions.hpp"
 # include "Logger.hpp"
 # include "ServerSocket.hpp"
 # include "PollFDs.hpp"
@@ -25,6 +26,8 @@ class WebServer
 	private:
 		ClientSocket * findClientSocket(int fd);
 		void cleanAllFromFD(size_t i);
+		std::string getSocketInfo(size_t i);
+		std::string translatePollError(short revents);
 };
 
 #endif //WEBSERVER_HPP

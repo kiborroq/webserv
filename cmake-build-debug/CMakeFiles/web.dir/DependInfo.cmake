@@ -4,14 +4,15 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/kiborroq/Desktop/git/webserv/ClientSocket.cpp" "/home/kiborroq/Desktop/git/webserv/cmake-build-debug/CMakeFiles/web.dir/ClientSocket.cpp.o"
-  "/home/kiborroq/Desktop/git/webserv/Config.cpp" "/home/kiborroq/Desktop/git/webserv/cmake-build-debug/CMakeFiles/web.dir/Config.cpp.o"
-  "/home/kiborroq/Desktop/git/webserv/Logger.cpp" "/home/kiborroq/Desktop/git/webserv/cmake-build-debug/CMakeFiles/web.dir/Logger.cpp.o"
-  "/home/kiborroq/Desktop/git/webserv/PollFDs.cpp" "/home/kiborroq/Desktop/git/webserv/cmake-build-debug/CMakeFiles/web.dir/PollFDs.cpp.o"
-  "/home/kiborroq/Desktop/git/webserv/ServerSocket.cpp" "/home/kiborroq/Desktop/git/webserv/cmake-build-debug/CMakeFiles/web.dir/ServerSocket.cpp.o"
-  "/home/kiborroq/Desktop/git/webserv/WebServer.cpp" "/home/kiborroq/Desktop/git/webserv/cmake-build-debug/CMakeFiles/web.dir/WebServer.cpp.o"
-  "/home/kiborroq/Desktop/git/webserv/main.cpp" "/home/kiborroq/Desktop/git/webserv/cmake-build-debug/CMakeFiles/web.dir/main.cpp.o"
-  "/home/kiborroq/Desktop/git/webserv/parsing_utils.cpp" "/home/kiborroq/Desktop/git/webserv/cmake-build-debug/CMakeFiles/web.dir/parsing_utils.cpp.o"
+  "/home/kiborrok/Desktop/git/webserv/ClientSocket.cpp" "/home/kiborrok/Desktop/git/webserv/cmake-build-debug/CMakeFiles/web.dir/ClientSocket.cpp.o"
+  "/home/kiborrok/Desktop/git/webserv/Config.cpp" "/home/kiborrok/Desktop/git/webserv/cmake-build-debug/CMakeFiles/web.dir/Config.cpp.o"
+  "/home/kiborrok/Desktop/git/webserv/Exceptions.cpp" "/home/kiborrok/Desktop/git/webserv/cmake-build-debug/CMakeFiles/web.dir/Exceptions.cpp.o"
+  "/home/kiborrok/Desktop/git/webserv/Logger.cpp" "/home/kiborrok/Desktop/git/webserv/cmake-build-debug/CMakeFiles/web.dir/Logger.cpp.o"
+  "/home/kiborrok/Desktop/git/webserv/PollFDs.cpp" "/home/kiborrok/Desktop/git/webserv/cmake-build-debug/CMakeFiles/web.dir/PollFDs.cpp.o"
+  "/home/kiborrok/Desktop/git/webserv/ServerSocket.cpp" "/home/kiborrok/Desktop/git/webserv/cmake-build-debug/CMakeFiles/web.dir/ServerSocket.cpp.o"
+  "/home/kiborrok/Desktop/git/webserv/WebServer.cpp" "/home/kiborrok/Desktop/git/webserv/cmake-build-debug/CMakeFiles/web.dir/WebServer.cpp.o"
+  "/home/kiborrok/Desktop/git/webserv/main.cpp" "/home/kiborrok/Desktop/git/webserv/cmake-build-debug/CMakeFiles/web.dir/main.cpp.o"
+  "/home/kiborrok/Desktop/git/webserv/parsing_utils.cpp" "/home/kiborrok/Desktop/git/webserv/cmake-build-debug/CMakeFiles/web.dir/parsing_utils.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

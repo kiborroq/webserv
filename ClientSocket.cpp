@@ -73,7 +73,7 @@ int ClientSocket::sendResponse(void)
 bool ClientSocket::readyForSending(void) const
 { return ready_to_send; }
 
-std::string const& ClientSocket::getSocketInfo(void) const
+std::string ClientSocket::getSocketInfo(void) const
 { return socket_info; }
 
 ServerSocket const& ClientSocket::getParentSocket(void) const

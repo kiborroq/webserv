@@ -9,6 +9,7 @@
 # include <unistd.h>
 # include <map>
 
+# include "Exceptions.hpp"
 # include "Config.hpp"
 # include "ClientSocket.hpp"
 
@@ -23,7 +24,7 @@ class ServerSocket
 
 	private:
 		server_context const* sc;
-		int sock_fd;
+		int socket_fd;
 		int optval;
 		struct sockaddr_in addr;
 		std::string socket_info;
@@ -34,7 +35,7 @@ class ServerSocket
 		ServerSocket(ServerSocket const& s);
 		~ServerSocket(void);
 
-		std::string const& getSocketInfo(void) const;
+		std::string getSocketInfo(void) const;
 		int getSocketFD(void) const;
 		server_context const& getServerContext(void) const;
 		ClientSocket const* getClientSocket(int fd) const;
@@ -45,8 +46,7 @@ class ServerSocket
 
 	private:
 		void setSocketAddr(void);
-		void createAdjustSocket(void);
-		void bindListenSocket(void);
+		void initSocket(void);
 };
 
 #endif //SOCKET_HPP

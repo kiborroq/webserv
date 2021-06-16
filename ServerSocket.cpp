@@ -1,17 +1,16 @@
 #include "ServerSocket.hpp"
 
 ServerSocket::ServerSocket(server_context const& sc)
-	: sc(&sc), sock_fd(), optval(1)
+	: sc(&sc), socket_fd(), optval(1)
 {
 	socket_info = "server socket " + sc.host + ":" + all_toa(sc.port);
 
 	setSocketAddr();
-	createAdjustSocket();
-	bindListenSocket();
+	initSocket();
 }
 
 ServerSocket::ServerSocket(ServerSocket const& s)
-	: sc(s.sc), sock_fd(s.sock_fd), optval(s.optval), addr(s.addr),
+	: sc(s.sc), socket_fd(s.socket_fd), optval(s.optval), addr(s.addr),
 	  socket_info(s.socket_info), client_socks(s.client_socks)
 { }
 
@@ -29,26 +28,14 @@ void ServerSocket::setSocketAddr(void)
 	addr.sin_port = htons(sc->port);
 }
 
-void ServerSocket::createAdjustSocket(void)
+void ServerSocket::initSocket(void)
 {
-	sock_fd = socket(AF_INET, SOCK_STREAM, 0);
-    if (sock_fd == -1)
-		throw "socket error";
-
-	if (setsockopt(sock_fd, SOL_SOCKET, SO_REUSEADDR, &optval, sizeof(int)) == -1)
-		throw "setopt error";
-
-	if (fcntl(sock_fd, F_SETFL, O_NONBLOCK) == -1)
-		throw "fctnl server error";
-}
-
-void ServerSocket::bindListenSocket(void)
-{
-	if (bind(sock_fd, reinterpret_cast<sockaddr *>(&addr), sizeof(addr)) != 0)
-		throw "bind error";
-
-	if (listen(sock_fd, BACKLOG) != 0)
-		throw "listen error";
+	if ((socket_fd = socket(AF_INET, SOCK_STREAM, 0)) == -1 ||
+		setsockopt(socket_fd, SOL_SOCKET, SO_REUSEADDR, &optval, sizeof(int)) == -1 ||
+		fcntl(socket_fd, F_SETFL, O_NONBLOCK) == -1 ||
+		bind(socket_fd, reinterpret_cast<sockaddr *>(&addr), sizeof(addr)) == -1 ||
+		listen(socket_fd, BACKLOG) == -1)
+		throw ThrowMessage(strerror(errno));
 }
 
 int ServerSocket::acceptClient(void)
@@ -57,10 +44,10 @@ int ServerSocket::acceptClient(void)
 	sockaddr addr_client;
 	socklen_t size = sizeof(addr_client);
 
-	if ((new_client_fd = accept(sock_fd, &addr_client, &size)) < 0)
+	if ((new_client_fd = accept(socket_fd, &addr_client, &size)) < 0)
 		return -1;
 	if (fcntl(new_client_fd, F_SETFL, O_NONBLOCK) == -1)
-		throw -1;
+		return -1;
 
 	client_socks.insert(std::make_pair(new_client_fd, ClientSocket(new_client_fd, addr_client, *this) ) );
 	return new_client_fd;
@@ -79,11 +66,11 @@ std::pair<bool, ClientSocket *> ServerSocket::findClient(int fd)
 	return std::make_pair(false, tmp);
 }
 
-std::string const& ServerSocket::getSocketInfo(void) const
+std::string ServerSocket::getSocketInfo(void) const
 { return socket_info; }
 
 int ServerSocket::getSocketFD(void) const
-{ return sock_fd; }
+{ return socket_fd; }
 
 server_context const& ServerSocket::getServerContext(void) const
 { return *sc; }
