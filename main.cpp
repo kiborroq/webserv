@@ -10,7 +10,7 @@ int main(int argc, char**argv, char**envp)
 
 	try
 	{
-		Config config("/home/kiborroq/Desktop/git/webserv/test.conf");
+		Config config("/home/kiborrok/Desktop/git/webserv/test.conf");
 		config.parseConfig();
 
 		WebServer ws(config.getServersMap());

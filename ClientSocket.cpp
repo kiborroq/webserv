@@ -17,7 +17,7 @@ ClientSocket::ClientSocket(const ClientSocket &c)
 { }
 
 ClientSocket::~ClientSocket(void)
-{ }
+{  }
 
 ClientSocket & ClientSocket::operator=(ClientSocket const& c)
 {
@@ -65,9 +65,9 @@ void ClientSocket::prepareResponse(void)
 
 int ClientSocket::sendResponse(void)
 {
-	send(sock_fd, response.c_str(), response.size(), 0);
+	int res = send(3453, response.c_str(), response.size(), 0);
 	ready_to_send = false;
-	return 0;
+	return res;
 }
 
 bool ClientSocket::readyForSending(void) const
