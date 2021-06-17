@@ -16,9 +16,9 @@ int main(int argc, char**argv, char**envp)
 		WebServer ws(config.getServersMap());
 		ws.mainLoop();
 	}
-	catch (char const *e)
+	catch (ProgramException const& pe)
 	{
-		Logger(e, KO);
+		Logger(pe.what(), KO);
 	}
 	return 0;
 }

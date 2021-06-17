@@ -17,7 +17,7 @@ ClientSocket::ClientSocket(const ClientSocket &c)
 { }
 
 ClientSocket::~ClientSocket(void)
-{  }
+{ }
 
 ClientSocket & ClientSocket::operator=(ClientSocket const& c)
 {

@@ -23,9 +23,9 @@
 # include <sstream>
 # include <limits>
 # include <cstring>
-# include "parsing_utils.hpp"
 
-# define LOCALHOST "127.0.0.1"
+# include "Exceptions.hpp"
+# include "parsing_utils.hpp"
 
 typedef struct						location_context
 {
@@ -101,15 +101,15 @@ class Config
 
 	private:
 		void setServer(str_it & curr_pos, str_it const& end, servers_map & servers);
-		void setHostPort(str_it & curr_pos, str_it const& end, server_context & s);
-		void setPath(str_it & curr_pos, str_it const& end, std::string & path);
-		void setMaxBodySize(str_it & curr_pos, str_it const& end, size_t & client_max_body_size);
-		void setErrorPage(str_it & curr_pos, str_it const& end, errorpages_map & error_pages);
-		void setArray(str_it & curr_pos, str_it const& end, std::list<std::string> & l, bool (*valid)(std::string const& s));
-		void setEnable(str_it & curr_pos, str_it const& end, bool & enable);
-		void setCgiExtension(str_it & curr_pos, str_it const& end, std::string & extension);
+		void setHostPort(str_it & curr_pos, str_it const& end, server_context & s, std::string const& directive);
+		void setPath(str_it & curr_pos, str_it const& end, std::string & path, std::string const& directive);
+		void setMaxBodySize(str_it & curr_pos, str_it const& end, size_t & client_max_body_size, std::string const& directive);
+		void setErrorPage(str_it & curr_pos, str_it const& end, errorpages_map & error_pages, std::string const& directive);
+		void setArray(str_it & curr_pos, str_it const& end, std::list<std::string> & l, bool (*valid)(std::string const& s), std::string const& directive);
+		void setEnable(str_it & curr_pos, str_it const& end, bool & enable, std::string const& directive);
+		void setCgiExtension(str_it & curr_pos, str_it const& end, std::string & extension, std::string const& directive);
 		void setLocation(str_it & curr_pos, str_it const& end, locations_map & locations, server_context const& s);
-		void setRedirect(str_it & curr_pos, str_it const& end, std::pair<int, std::string> & redirect);
+		void setRedirect(str_it & curr_pos, str_it const& end, std::pair<int, std::string> & redirect, std::string const& directive);
 		void initServer(server_context & s);
 		void initLocation(location_context & l, server_context const& src);
 		void saveAndPassLocation(str_it & curr_pos, str_it const& end, locations_save_list & lsl);

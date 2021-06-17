@@ -21,7 +21,9 @@ class ProgramException : public std::exception
 class ConfigException : public ProgramException
 {
 	public:
-		ConfigException(std::string const& message) : ProgramException(message) { }
+		ConfigException(std::string const& message)
+			: ProgramException( "Configuration file error: " + message)
+		{ }
 };
 
 class ThrowMessage : public std::exception

@@ -119,21 +119,21 @@ size_t tobytes(std::string const& size)
 	return  bytes;
 }
 
-std::string getFileContent(char const* config_path)
+std::string getFileContent(char const* config_path, bool & iserror)
 {
 	std::string line;
 	std::string content;
-
 	std::ifstream fin(config_path);
-
-	if (fin.fail())
-		throw "Config file error!";
 
 	while (!fin.fail() && !fin.eof())
 	{
 		getline(fin, line);
 		content += line;
 	}
+
+	if (fin.fail())
+		iserror = true;
+
 	return content;
 }
 
