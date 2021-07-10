@@ -2,7 +2,7 @@
 # define CLIENT_HPP
 
 # define READSIZE 100000
-# define READY_TO_SEND 4
+# define MAX_NOT_ACTIVE_TIME 10
 
 # include <sys/socket.h>
 # include "CHttpRequest.hpp"
@@ -13,6 +13,7 @@ class ServerSocket;
 class ClientSocket
 {
 	private:
+		long last_active_time;
 		int sock_fd;
 		ServerSocket const* parent;
 		sockaddr_in addr;
@@ -38,6 +39,9 @@ class ClientSocket
 		std::string getSocketInfo(void) const;
 		ServerSocket const& getParentSocket(void) const;
 		int getSocketFD(void) const;
+
+		bool isactive();
+		void reset_last_active_time();
 };
 
 #endif //CLIENT_HPP

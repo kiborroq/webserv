@@ -70,19 +70,16 @@ std::string WebServer::translatePollError(short revents)
 
 void WebServer::mainLoop(void)
 {
-	int num_fd;
 	std::string socket_info;
 
 	while (21)
 	{
-		if ((num_fd = poll( poll_fds.getFDs(), poll_fds.size(), -1 )) < 0)
+		if (poll(poll_fds.getFDs(), poll_fds.size(), 5000) < 0)
 			throw ProgramException(strerror(errno));
-		for (size_t i = 0; num_fd > 0 && i < poll_fds.size(); ++i)
+		for (size_t i = 0; i < poll_fds.size(); ++i)
 		{
 			socket_info = getSocketInfo(i);
 
-			if (poll_fds[i].revents != 0)
-				num_fd--;
 			try
 			{
 				if (poll_fds[i].revents & POLLIN)
@@ -103,6 +100,7 @@ void WebServer::mainLoop(void)
 					else
 					{
 						ClientSocket * for_read = findClientSocket(poll_fds[i].fd);
+
 						int nbr = for_read->receiveRequest();
 						if (nbr < 0)
 						{
@@ -111,7 +109,20 @@ void WebServer::mainLoop(void)
 								strerror(errno) + " This client socket was deleted.");
 						}
 						else if (nbr > 0)
-							Logger(socket_info + " received request.", OK);
+						{
+							if (for_read->readyForSending())
+								Logger(socket_info + " received request.", OK);
+							for_read->reset_last_active_time();
+						}
+						else if (nbr == 0)
+						{
+							if (!for_read->isactive())
+							{
+								cleanAllFromFD(i--);
+								throw ThrowMessage(socket_info + " was deleted because: client isn't active already " +
+												   all_toa(MAX_NOT_ACTIVE_TIME) + ".");
+							}
+						}
 					}
 					poll_fds[i].revents = 0;
 				}
@@ -131,9 +142,21 @@ void WebServer::mainLoop(void)
 						}
 						else if (nbr > 0)
 							Logger(socket_info + " sent response.", OK);
+						for_write->reset_last_active_time();
 					}
 					else
 						poll_fds[i].revents = 0;
+				}
+				else if (poll_fds[i].revents == 0 && i >= serv_socks.size())
+				{
+					ClientSocket * client = findClientSocket(poll_fds[i].fd);
+
+					if (!client->isactive())
+					{
+						cleanAllFromFD(i--);
+						throw ThrowMessage(socket_info + " was deleted because: client isn't active already " +
+											all_toa(MAX_NOT_ACTIVE_TIME) + ".");
+					}
 				}
 				else if (poll_fds[i].revents != 0)
 				{

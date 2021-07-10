@@ -1,6 +1,8 @@
 #ifndef WEBSERVER_HPP
 # define WEBSERVER_HPP
 
+# define TIMEOUT 60000
+
 # include <vector>
 # include <sys/poll.h>
 # include "Exceptions.hpp"

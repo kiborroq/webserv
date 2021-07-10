@@ -10,6 +10,7 @@ ClientSocket::ClientSocket(int fd, sockaddr & saddr, ServerSocket const& s)
 					ft_inet_ntoa(addr.sin_addr) + ":" +
 					all_toa(ntohs(addr.sin_port));
 
+	reset_last_active_time();
 	status = FSM_AGAIN;
 }
 
@@ -87,3 +88,13 @@ ServerSocket const& ClientSocket::getParentSocket(void) const
 
 int ClientSocket::getSocketFD(void) const
 { return sock_fd; }
+
+bool ClientSocket::isactive() {
+	if (time(NULL) - last_active_time > MAX_NOT_ACTIVE_TIME)
+		return false;
+	return true;
+}
+
+void ClientSocket::reset_last_active_time() {
+	last_active_time = time(NULL);
+}
