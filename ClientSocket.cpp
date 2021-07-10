@@ -9,11 +9,13 @@ ClientSocket::ClientSocket(int fd, sockaddr & saddr, ServerSocket const& s)
 	socket_info =	"client socket " +
 					ft_inet_ntoa(addr.sin_addr) + ":" +
 					all_toa(ntohs(addr.sin_port));
+
+	status = FSM_AGAIN;
 }
 
 ClientSocket::ClientSocket(const ClientSocket &c)
 	: sock_fd(c.sock_fd), parent(c.parent), addr(c.addr), socket_info(c.socket_info),
-	request(c.request), ready_to_send(c.ready_to_send), response(c.response)
+	request(c.request), status(c.status), response(c.response)
 { }
 
 ClientSocket::~ClientSocket(void)
@@ -25,20 +27,24 @@ ClientSocket & ClientSocket::operator=(ClientSocket const& c)
 	this->parent = c.parent;
 	this->addr = c.addr;
 	this->request = c.request;
-	this->ready_to_send = c.ready_to_send;
+	this->status = c.status;
 	this->response = c.response;
 	return *this;
 }
 
 int ClientSocket::receiveRequest(void)
 {
-	char buf[BUFSIZ + 1];
-	memset(buf, 0, BUFSIZ + 1);
-	int received = recv(sock_fd, buf, BUFSIZ, 0);
+	if (status == FSM_OK)
+		return 0;
+
+	char buf[READSIZE + 1];
+	memset(buf, 0, READSIZE + 1);
+	int received = recv(sock_fd, buf, READSIZE, 0);
+
 	if (received > 0)
 	{
 		request.append(buf);
-		ready_to_send = true;
+		status = httpTreatment.handleHttpRequest(request);
 	}
 	return received;
 }
@@ -65,13 +71,13 @@ void ClientSocket::prepareResponse(void)
 
 int ClientSocket::sendResponse(void)
 {
-	int res = send(3453, response.c_str(), response.size(), 0);
-	ready_to_send = false;
+	int res = send(sock_fd, response.c_str(), response.size(), 0);
+	status = FSM_AGAIN;
 	return res;
 }
 
 bool ClientSocket::readyForSending(void) const
-{ return ready_to_send; }
+{ return status == FSM_OK; }
 
 std::string ClientSocket::getSocketInfo(void) const
 { return socket_info; }

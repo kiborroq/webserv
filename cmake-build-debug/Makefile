@@ -130,206 +130,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named web
+# Target rules for targets named FSM
 
 # Build rule for target.
-web: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 web
-.PHONY : web
+FSM: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 FSM
+.PHONY : FSM
 
 # fast build rule for target.
-web/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/build
-.PHONY : web/fast
+FSM/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FSM.dir/build.make CMakeFiles/FSM.dir/build
+.PHONY : FSM/fast
 
-ClientSocket.o: ClientSocket.cpp.o
+CHttpRequest.o: CHttpRequest.cpp.o
 
-.PHONY : ClientSocket.o
-
-# target to build an object file
-ClientSocket.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/ClientSocket.cpp.o
-.PHONY : ClientSocket.cpp.o
-
-ClientSocket.i: ClientSocket.cpp.i
-
-.PHONY : ClientSocket.i
-
-# target to preprocess a source file
-ClientSocket.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/ClientSocket.cpp.i
-.PHONY : ClientSocket.cpp.i
-
-ClientSocket.s: ClientSocket.cpp.s
-
-.PHONY : ClientSocket.s
-
-# target to generate assembly for a file
-ClientSocket.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/ClientSocket.cpp.s
-.PHONY : ClientSocket.cpp.s
-
-Config.o: Config.cpp.o
-
-.PHONY : Config.o
+.PHONY : CHttpRequest.o
 
 # target to build an object file
-Config.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/Config.cpp.o
-.PHONY : Config.cpp.o
+CHttpRequest.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FSM.dir/build.make CMakeFiles/FSM.dir/CHttpRequest.cpp.o
+.PHONY : CHttpRequest.cpp.o
 
-Config.i: Config.cpp.i
+CHttpRequest.i: CHttpRequest.cpp.i
 
-.PHONY : Config.i
-
-# target to preprocess a source file
-Config.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/Config.cpp.i
-.PHONY : Config.cpp.i
-
-Config.s: Config.cpp.s
-
-.PHONY : Config.s
-
-# target to generate assembly for a file
-Config.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/Config.cpp.s
-.PHONY : Config.cpp.s
-
-Exceptions.o: Exceptions.cpp.o
-
-.PHONY : Exceptions.o
-
-# target to build an object file
-Exceptions.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/Exceptions.cpp.o
-.PHONY : Exceptions.cpp.o
-
-Exceptions.i: Exceptions.cpp.i
-
-.PHONY : Exceptions.i
+.PHONY : CHttpRequest.i
 
 # target to preprocess a source file
-Exceptions.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/Exceptions.cpp.i
-.PHONY : Exceptions.cpp.i
+CHttpRequest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FSM.dir/build.make CMakeFiles/FSM.dir/CHttpRequest.cpp.i
+.PHONY : CHttpRequest.cpp.i
 
-Exceptions.s: Exceptions.cpp.s
+CHttpRequest.s: CHttpRequest.cpp.s
 
-.PHONY : Exceptions.s
-
-# target to generate assembly for a file
-Exceptions.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/Exceptions.cpp.s
-.PHONY : Exceptions.cpp.s
-
-Logger.o: Logger.cpp.o
-
-.PHONY : Logger.o
-
-# target to build an object file
-Logger.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/Logger.cpp.o
-.PHONY : Logger.cpp.o
-
-Logger.i: Logger.cpp.i
-
-.PHONY : Logger.i
-
-# target to preprocess a source file
-Logger.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/Logger.cpp.i
-.PHONY : Logger.cpp.i
-
-Logger.s: Logger.cpp.s
-
-.PHONY : Logger.s
+.PHONY : CHttpRequest.s
 
 # target to generate assembly for a file
-Logger.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/Logger.cpp.s
-.PHONY : Logger.cpp.s
-
-PollFDs.o: PollFDs.cpp.o
-
-.PHONY : PollFDs.o
-
-# target to build an object file
-PollFDs.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/PollFDs.cpp.o
-.PHONY : PollFDs.cpp.o
-
-PollFDs.i: PollFDs.cpp.i
-
-.PHONY : PollFDs.i
-
-# target to preprocess a source file
-PollFDs.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/PollFDs.cpp.i
-.PHONY : PollFDs.cpp.i
-
-PollFDs.s: PollFDs.cpp.s
-
-.PHONY : PollFDs.s
-
-# target to generate assembly for a file
-PollFDs.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/PollFDs.cpp.s
-.PHONY : PollFDs.cpp.s
-
-ServerSocket.o: ServerSocket.cpp.o
-
-.PHONY : ServerSocket.o
-
-# target to build an object file
-ServerSocket.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/ServerSocket.cpp.o
-.PHONY : ServerSocket.cpp.o
-
-ServerSocket.i: ServerSocket.cpp.i
-
-.PHONY : ServerSocket.i
-
-# target to preprocess a source file
-ServerSocket.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/ServerSocket.cpp.i
-.PHONY : ServerSocket.cpp.i
-
-ServerSocket.s: ServerSocket.cpp.s
-
-.PHONY : ServerSocket.s
-
-# target to generate assembly for a file
-ServerSocket.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/ServerSocket.cpp.s
-.PHONY : ServerSocket.cpp.s
-
-WebServer.o: WebServer.cpp.o
-
-.PHONY : WebServer.o
-
-# target to build an object file
-WebServer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/WebServer.cpp.o
-.PHONY : WebServer.cpp.o
-
-WebServer.i: WebServer.cpp.i
-
-.PHONY : WebServer.i
-
-# target to preprocess a source file
-WebServer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/WebServer.cpp.i
-.PHONY : WebServer.cpp.i
-
-WebServer.s: WebServer.cpp.s
-
-.PHONY : WebServer.s
-
-# target to generate assembly for a file
-WebServer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/WebServer.cpp.s
-.PHONY : WebServer.cpp.s
+CHttpRequest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FSM.dir/build.make CMakeFiles/FSM.dir/CHttpRequest.cpp.s
+.PHONY : CHttpRequest.cpp.s
 
 main.o: main.cpp.o
 
@@ -337,7 +175,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FSM.dir/build.make CMakeFiles/FSM.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -346,7 +184,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FSM.dir/build.make CMakeFiles/FSM.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -355,35 +193,8 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FSM.dir/build.make CMakeFiles/FSM.dir/main.cpp.s
 .PHONY : main.cpp.s
-
-parsing_utils.o: parsing_utils.cpp.o
-
-.PHONY : parsing_utils.o
-
-# target to build an object file
-parsing_utils.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/parsing_utils.cpp.o
-.PHONY : parsing_utils.cpp.o
-
-parsing_utils.i: parsing_utils.cpp.i
-
-.PHONY : parsing_utils.i
-
-# target to preprocess a source file
-parsing_utils.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/parsing_utils.cpp.i
-.PHONY : parsing_utils.cpp.i
-
-parsing_utils.s: parsing_utils.cpp.s
-
-.PHONY : parsing_utils.s
-
-# target to generate assembly for a file
-parsing_utils.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/parsing_utils.cpp.s
-.PHONY : parsing_utils.cpp.s
 
 # Help Target
 help:
@@ -393,34 +204,13 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... web"
-	@echo "... ClientSocket.o"
-	@echo "... ClientSocket.i"
-	@echo "... ClientSocket.s"
-	@echo "... Config.o"
-	@echo "... Config.i"
-	@echo "... Config.s"
-	@echo "... Exceptions.o"
-	@echo "... Exceptions.i"
-	@echo "... Exceptions.s"
-	@echo "... Logger.o"
-	@echo "... Logger.i"
-	@echo "... Logger.s"
-	@echo "... PollFDs.o"
-	@echo "... PollFDs.i"
-	@echo "... PollFDs.s"
-	@echo "... ServerSocket.o"
-	@echo "... ServerSocket.i"
-	@echo "... ServerSocket.s"
-	@echo "... WebServer.o"
-	@echo "... WebServer.i"
-	@echo "... WebServer.s"
+	@echo "... FSM"
+	@echo "... CHttpRequest.o"
+	@echo "... CHttpRequest.i"
+	@echo "... CHttpRequest.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... parsing_utils.o"
-	@echo "... parsing_utils.i"
-	@echo "... parsing_utils.s"
 .PHONY : help
 
 

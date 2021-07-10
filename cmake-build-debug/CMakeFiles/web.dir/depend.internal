@@ -11,11 +11,13 @@ CMakeFiles/web.dir/ClientSocket.cpp.o
 CMakeFiles/web.dir/Config.cpp.o
  /home/kiborrok/Desktop/git/webserv/Config.cpp
  /home/kiborrok/Desktop/git/webserv/Config.hpp
+ /home/kiborrok/Desktop/git/webserv/Exceptions.hpp
  /home/kiborrok/Desktop/git/webserv/parsing_utils.hpp
 CMakeFiles/web.dir/Exceptions.cpp.o
  /home/kiborrok/Desktop/git/webserv/Exceptions.cpp
  /home/kiborrok/Desktop/git/webserv/Exceptions.hpp
 CMakeFiles/web.dir/Logger.cpp.o
+ /home/kiborrok/Desktop/git/webserv/Exceptions.hpp
  /home/kiborrok/Desktop/git/webserv/Logger.cpp
  /home/kiborrok/Desktop/git/webserv/Logger.hpp
  /home/kiborrok/Desktop/git/webserv/parsing_utils.hpp

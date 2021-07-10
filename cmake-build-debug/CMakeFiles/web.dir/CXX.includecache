@@ -44,10 +44,6 @@ cstring
 parsing_utils.hpp
 /home/kiborrok/Desktop/git/webserv/parsing_utils.hpp
 
-/home/kiborrok/Desktop/git/webserv/Exceptions.cpp
-Exceptions.hpp
-/home/kiborrok/Desktop/git/webserv/Exceptions.hpp
-
 /home/kiborrok/Desktop/git/webserv/Exceptions.hpp
 string
 -
@@ -67,10 +63,6 @@ iostream
 -
 parsing_utils.hpp
 /home/kiborrok/Desktop/git/webserv/parsing_utils.hpp
-
-/home/kiborrok/Desktop/git/webserv/PollFDs.cpp
-PollFDs.hpp
-/home/kiborrok/Desktop/git/webserv/PollFDs.hpp
 
 /home/kiborrok/Desktop/git/webserv/PollFDs.hpp
 vector
@@ -126,18 +118,6 @@ ServerSocket.hpp
 PollFDs.hpp
 /home/kiborrok/Desktop/git/webserv/PollFDs.hpp
 
-/home/kiborrok/Desktop/git/webserv/main.cpp
-Logger.hpp
-/home/kiborrok/Desktop/git/webserv/Logger.hpp
-Config.hpp
-/home/kiborrok/Desktop/git/webserv/Config.hpp
-WebServer.hpp
-/home/kiborrok/Desktop/git/webserv/WebServer.hpp
-
-/home/kiborrok/Desktop/git/webserv/parsing_utils.cpp
-parsing_utils.hpp
-/home/kiborrok/Desktop/git/webserv/parsing_utils.hpp
-
 /home/kiborrok/Desktop/git/webserv/parsing_utils.hpp
 sstream
 -
@@ -145,4 +125,6 @@ fstream
 -
 limits
 -
+Exceptions.hpp
+/home/kiborrok/Desktop/git/webserv/Exceptions.hpp
 

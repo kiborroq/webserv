@@ -1,7 +1,11 @@
 #ifndef CLIENT_HPP
 # define CLIENT_HPP
 
+# define READSIZE 100000
+# define READY_TO_SEND 4
+
 # include <sys/socket.h>
+# include "CHttpRequest.hpp"
 # include "ServerSocket.hpp"
 
 class ServerSocket;
@@ -13,8 +17,9 @@ class ClientSocket
 		ServerSocket const* parent;
 		sockaddr_in addr;
 		std::string socket_info;
+		CHttpRequest httpTreatment;
 		std::string request;
-		bool ready_to_send;
+		int status;
 		std::string response;
 
 	public:

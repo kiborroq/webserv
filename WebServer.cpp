@@ -103,14 +103,15 @@ void WebServer::mainLoop(void)
 					else
 					{
 						ClientSocket * for_read = findClientSocket(poll_fds[i].fd);
-
-						if (for_read->receiveRequest() < 0)
+						int nbr = for_read->receiveRequest();
+						if (nbr < 0)
 						{
 							cleanAllFromFD(i--);
 							throw ThrowMessage(socket_info + " did not receive request, because: " +
 								strerror(errno) + " This client socket was deleted.");
 						}
-						Logger(socket_info + " received request.", OK);
+						else if (nbr > 0)
+							Logger(socket_info + " received request.", OK);
 					}
 					poll_fds[i].revents = 0;
 				}
@@ -121,13 +122,15 @@ void WebServer::mainLoop(void)
 					if (for_write->readyForSending())
 					{
 						for_write->prepareResponse();
-						int sent = for_write->sendResponse();
-						cleanAllFromFD(i--);
-						if (sent < 0)
+						int nbr = for_write->sendResponse();
+						if (nbr < 0)
+						{
+							cleanAllFromFD(i--);
 							throw ThrowMessage(socket_info + " did not send response, because: " +
-								strerror(errno) + " This client socket was deleted.");
-
-						Logger(socket_info + " sent response. This client socket was deleted.", OK);
+											   strerror(errno) + " This client socket was deleted.");
+						}
+						else if (nbr > 0)
+							Logger(socket_info + " sent response.", OK);
 					}
 					else
 						poll_fds[i].revents = 0;

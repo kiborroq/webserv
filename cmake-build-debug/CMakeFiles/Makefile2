@@ -72,7 +72,7 @@ CMAKE_BINARY_DIR = /home/kiborrok/Desktop/git/webserv/cmake-build-debug
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/web.dir/all
+all: CMakeFiles/FSM.dir/all
 
 .PHONY : all
 
@@ -82,36 +82,36 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/web.dir/clean
+clean: CMakeFiles/FSM.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/web.dir
+# Target rules for target CMakeFiles/FSM.dir
 
 # All Build rule for target.
-CMakeFiles/web.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kiborrok/Desktop/git/webserv/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target web"
-.PHONY : CMakeFiles/web.dir/all
+CMakeFiles/FSM.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FSM.dir/build.make CMakeFiles/FSM.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FSM.dir/build.make CMakeFiles/FSM.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kiborrok/Desktop/git/webserv/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target FSM"
+.PHONY : CMakeFiles/FSM.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/web.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kiborrok/Desktop/git/webserv/cmake-build-debug/CMakeFiles 10
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/web.dir/all
+CMakeFiles/FSM.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kiborrok/Desktop/git/webserv/cmake-build-debug/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/FSM.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kiborrok/Desktop/git/webserv/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/web.dir/rule
+.PHONY : CMakeFiles/FSM.dir/rule
 
 # Convenience name for target.
-web: CMakeFiles/web.dir/rule
+FSM: CMakeFiles/FSM.dir/rule
 
-.PHONY : web
+.PHONY : FSM
 
 # clean rule for target.
-CMakeFiles/web.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/web.dir/build.make CMakeFiles/web.dir/clean
-.PHONY : CMakeFiles/web.dir/clean
+CMakeFiles/FSM.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FSM.dir/build.make CMakeFiles/FSM.dir/clean
+.PHONY : CMakeFiles/FSM.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

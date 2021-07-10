@@ -10,11 +10,13 @@ CMakeFiles/web.dir/ClientSocket.cpp.o: ../parsing_utils.hpp
 
 CMakeFiles/web.dir/Config.cpp.o: ../Config.cpp
 CMakeFiles/web.dir/Config.cpp.o: ../Config.hpp
+CMakeFiles/web.dir/Config.cpp.o: ../Exceptions.hpp
 CMakeFiles/web.dir/Config.cpp.o: ../parsing_utils.hpp
 
 CMakeFiles/web.dir/Exceptions.cpp.o: ../Exceptions.cpp
 CMakeFiles/web.dir/Exceptions.cpp.o: ../Exceptions.hpp
 
+CMakeFiles/web.dir/Logger.cpp.o: ../Exceptions.hpp
 CMakeFiles/web.dir/Logger.cpp.o: ../Logger.cpp
 CMakeFiles/web.dir/Logger.cpp.o: ../Logger.hpp
 CMakeFiles/web.dir/Logger.cpp.o: ../parsing_utils.hpp
